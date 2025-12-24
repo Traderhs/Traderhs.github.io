@@ -1,0 +1,183 @@
+/* Global Font */
+:root {
+    --font-family: 'Noto Sans KR', sans-serif;
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 960px;
+    --radius: 12px;
+    --theme: #fff;
+    --entry: #fff;
+    --primary: #2e2e2e;
+    --secondary: #6c757d;
+    --tertiary: #ced4da;
+    --border: #e9ecef;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Overrides */
+.dark {
+    --theme: #1d1e20;
+    --entry: #2d2d2d;
+    --primary: #e9ecef;
+    --secondary: #adb5bd;
+    --tertiary: #6c757d;
+    --border: #495057;
+    background-color: #121212;
+    color: #e9ecef;
+}
+
+/* Header Styling */
+.nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.dark .nav {
+    background: rgba(29, 30, 32, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo a {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Post Entry (Card Style) */
+.post-entry {
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    margin-bottom: var(--gap);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.post-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: var(--tertiary);
+}
+
+.entry-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.entry-content {
+    color: var(--secondary);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.entry-footer {
+    color: var(--tertiary);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Profile Mode Styling */
+.profile {
+    margin-top: 40px;
+}
+
+.profile .profile_inner h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.profile img {
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.buttons .button {
+    background: var(--primary);
+    color: var(--theme);
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.buttons .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: var(--secondary);
+}
+
+/* Social Icons */
+.social-icons a {
+    background: rgba(0,0,0,0.05);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.dark .social-icons a {
+    background: rgba(255,255,255,0.1);
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    color: var(--theme);
+    transform: translateY(-3px);
+}
+
+.social-icons a svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
