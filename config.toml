@@ -1,6 +1,6 @@
-baseURL = "https://traderhs.github.io/"
+baseURL = "https://quantboard.github.io/"
 languageCode = "ko-kr"
-title = "Traderhs Blog"
+title = "QuantBoard"
 theme = "PaperMod"
 
 [pagination]
@@ -16,14 +16,14 @@ theme = "PaperMod"
   ShowCodeCopyButtons = true
   ShowWordCount = true
   UseHugoToc = true
-  
+
   [params.homeInfoParams]
-    Title = "안녕하세요, Traderhs입니다."
+    Title = "안녕하세요, QuantBoard입니다."
     Content = "주식, 코딩, 그리고 일상을 기록하는 블로그입니다. \n 더 나은 내일을 위해 오늘도 배웁니다."
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/traderhs"
+    url = "https://github.com/quantboard"
   [[params.socialIcons]]
     name = "twitter"
     url = "https://twitter.com/"
