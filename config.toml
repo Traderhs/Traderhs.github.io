@@ -1,10 +1,14 @@
-baseURL = "https://quantboard.github.io/"
+baseURL = "https://traderhs.github.io/"
 languageCode = "ko-kr"
 title = "QuantBoard"
 theme = "PaperMod"
 
 [pagination]
   pagerSize = 10
+
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$', '^VISITOR_API_URL$']
 
 [params]
   defaultTheme = "auto"
@@ -18,12 +22,12 @@ theme = "PaperMod"
   UseHugoToc = true
 
   [params.homeInfoParams]
-    Title = "안녕하세요, QuantBoard입니다."
-    Content = "주식, 코딩, 그리고 일상을 기록하는 블로그입니다. \n 더 나은 내일을 위해 오늘도 배웁니다."
+    Title = "QuantBoard"
+    Content = "퀀트 트레이더를 꿈꾸고 있습니다."
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/quantboard"
+    url = "https://github.com/traderhs"
   [[params.socialIcons]]
     name = "twitter"
     url = "https://twitter.com/"
